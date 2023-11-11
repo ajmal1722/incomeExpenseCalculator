@@ -8,13 +8,19 @@
 
 </head>
 <body>
+    <h2>Income Expense calculator</h2>
+
     <input class="js-input-income" type="number" placeholder="your Income">
-    <button onclick="getIncome()" >Add</button>
+    <button onclick="addIncome()" >Add</button>
 
     <div class="js-display-income"></div>
 
-    <input type="number" placeholder="Expenses">
-    <button onclick="" >Add</button>
+    <input class="js-input-expense" type="number" placeholder="Expenses">
+    <input type="text" placeholder="category">
+    <button onclick="addExpense ()" >Add</button>
+
+    <div class="js-display-expense"></div>
+
     <script src="sample.js"></script>
 
 </body>
