@@ -52,13 +52,19 @@ function getIncome () {
 }
 function getExpense (){
     const inputExpenseElement = document.querySelector('.js-input-expense');
-    const inputExpense = inputExpenseElement.value;
+    const inputExpense = parseFloat(inputExpenseElement.value);
 
     const inputCategoryElement = document.querySelector('.js-input-category');
-    const inputCategory = parseFloat(inputCategoryElement.value);
+    const inputCategory = inputCategoryElement.value;
      
     if (inputExpenseElement.value !== '' && inputCategoryElement.value !== ''){
-        
+        const tableBody = document.querySelector('.js-table');
+        const newRow = tableBody.insertRow();
+        const cellCategory = newRow.insertCell(0);
+        const cellExpense = newRow.insertCell(1);
+        cellCategory.textContent = cellCategory;
+        cellExpense.innerHTML = cellExpense;
+
         console.log (inputCategory)
     }
 }
