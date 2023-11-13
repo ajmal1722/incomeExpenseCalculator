@@ -37,17 +37,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container bg-danger text-light text-center">
+    <div class="container bg-danger text-light text-center mt-3">
         <div class="row">
             <div class="col-sm-6">
-                <p>Income</p>
-                <input class="mb-2" type="number">
+                <h5>Income</h5>
+                <input class="mb-2" type="text" placeholder="Category">
+                <input class="mb-2" type="number" placeholder="Income">
                 <button class="">Add</button>
             </div>
             <div class="col-sm-6">
-                <p>Expense</p>
+                <h5>Expense</h5>
+                <input class="mb-2" type="text" placeholder="Category">
                 <input class="mb-2" type="number" placeholder="Expense">
-                <input class="mb-2" type="text" placeholder="Expense category">
                 <button class="">Add</button>
             </div>
         </div>
@@ -58,20 +59,20 @@
                 <h5>Income</h5>
                 <div class="js-income-display mx-auto my-3"></div>
                 <h5 class="pt-5" >Balance</h5>
-                <div class="js-balance-display mx-auto my-3"></div>
+                <div class="js-balance-display mx-auto mt-3 mb-5"></div>
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-5 mt-4">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Expense</th>
                             <th>Category</th>
-                            <th>Balance</th>
+                            <th>Aount</th>
+                            <th>Type</th>
                         </tr>
                         <tr>
-                            <td>400</td>
                             <td>hair cutting</td>
                             <td>400</td>
+                            <td>Expense</td>
                         </tr>
                     </thead>
                 </table>
