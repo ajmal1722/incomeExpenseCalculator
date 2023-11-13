@@ -34,3 +34,11 @@
 //     renderExpense();
 // }
 
+
+// To display total income 
+function getIncome () {
+    const inputIncomeElement = document.querySelector('.js-input-income');
+    const inputIncome = inputIncomeElement.value;
+    
+    document.querySelector('.js-income-display').innerHTML = inputIncome;
+}
