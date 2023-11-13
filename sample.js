@@ -36,8 +36,7 @@
 
 
 // To display total income 
-let income1 = 0;
-let income = parseFloat(income1)
+let income = 0;
 function getIncome () {
     const inputIncomeElement = document.querySelector('.js-input-income');
     const inputIncome = parseFloat (inputIncomeElement.value);
@@ -46,7 +45,20 @@ function getIncome () {
     
     document.querySelector('.js-income-display').innerHTML = income;
     inputIncomeElement.value = '';
+    document.querySelector('.js-income-category').value ='';
     } else {
         alert ('Enter a proper Income amount');
+    }
+}
+function getExpense (){
+    const inputExpenseElement = document.querySelector('.js-input-expense');
+    const inputExpense = inputExpenseElement.value;
+
+    const inputCategoryElement = document.querySelector('.js-input-category');
+    const inputCategory = parseFloat(inputCategoryElement.value);
+     
+    if (inputExpenseElement.value !== '' && inputCategoryElement.value !== ''){
+        
+        console.log (inputCategory)
     }
 }
