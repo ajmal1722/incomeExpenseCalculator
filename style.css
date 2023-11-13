@@ -1,0 +1,6 @@
+.js-income-display,.js-balance-display {
+    width: 120px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
