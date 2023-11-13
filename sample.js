@@ -41,8 +41,12 @@ let income = parseFloat(income1)
 function getIncome () {
     const inputIncomeElement = document.querySelector('.js-input-income');
     const inputIncome = parseFloat (inputIncomeElement.value);
+    if (inputIncomeElement.value !== ''){
         income = income + inputIncome;
     
     document.querySelector('.js-income-display').innerHTML = income;
-    inputIncomeElement.value = ''
+    inputIncomeElement.value = '';
+    } else {
+        alert ('Enter a proper Income amount');
+    }
 }
