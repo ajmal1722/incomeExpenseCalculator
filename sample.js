@@ -36,9 +36,13 @@
 
 
 // To display total income 
+let income1 = 0;
+let income = parseFloat(income1)
 function getIncome () {
     const inputIncomeElement = document.querySelector('.js-input-income');
-    const inputIncome = inputIncomeElement.value;
+    const inputIncome = parseFloat (inputIncomeElement.value);
+        income = income + inputIncome;
     
-    document.querySelector('.js-income-display').innerHTML = inputIncome;
+    document.querySelector('.js-income-display').innerHTML = income;
+    inputIncomeElement.value = ''
 }
