@@ -14,9 +14,12 @@ function getIncome () {
         document.querySelector('.js-balance-display').innerHTML = 
         balance;
     
-    document.querySelector('.js-income-display').innerHTML = income;
-    inputIncomeElement.value = '';
-    document.querySelector('.js-income-category').value ='';
+        document.querySelector('.js-income-display').innerHTML = income;
+
+        updatePieChart (income, totalExpense, income - totalExpense);
+
+        inputIncomeElement.value = '';
+        document.querySelector('.js-income-category').value ='';
     } else {
         alert ('Enter a proper Income amount');
     }
@@ -53,11 +56,13 @@ function getExpense() {
         document.querySelector('.js-balance-display').innerHTML = 
         balance;
 
-        updatePieChart()
+        updatePieChart(income, totalExpense, income - totalExpense)
 
         // Clear input fields
         inputExpenseElement.value = '';
         inputCategoryElement.value = '';  
+    } else {
+        alert('Enter a valid expense amount and category');
     }
 }
 
@@ -65,7 +70,7 @@ function updatePieChart(a, b, c) {
     const data = {
         labels: ['Income', 'Expense', 'Balance'],
         datasets: [{
-            data: [income, totalExpense, income - totalExpense],
+            data: [a, b, c],
             backgroundColor: ['#66b3ff', '#ffcc99', '#99ff99'] 
         }]
     };
@@ -82,4 +87,4 @@ function updatePieChart(a, b, c) {
         }
     });
 }
-updatePieChart();
+updatePieChart(income, totalExpense, income - totalExpense);

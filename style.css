@@ -1,9 +1,21 @@
+body {
+    background: rgb(6,134,161);
+    background: linear-gradient(90deg, rgba(6,134,161,1) 53%, rgba(255,255,255,1) 100%);
+    
+}
 .js-income-display,.js-balance-display {
     width: 120px;
     height: 50px;
-    background-color: red;
     border-radius: 20px;
     padding-top: 12px;
+    font-weight: 500;
+    background: whitesmoke;
+}
+.js-income-display{
+    color: rgb(98, 159, 7);
+}
+.js-balance-display{
+    color: red;
 }
 .js-expense-total {
     width:  98%;
@@ -11,6 +23,9 @@
     color: red;
     border-style: none;
 }
-.js-income-display {
-    
+canvas {
+    margin-top: 50px;
+}
+button {
+    border-style: none;
 }
