@@ -39,7 +39,9 @@ function getExpense() {
 
         // to find the total balance
         totalExpense = totalExpense + inputExpense;
-        console.log (totalExpense);
+        
+        document.querySelector('.js-expense-total').innerHTML = 
+        `Total Expense = ${totalExpense}`;
 
         // Clear input fields
         inputExpenseElement.value = '';

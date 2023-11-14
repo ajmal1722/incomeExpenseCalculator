@@ -5,6 +5,12 @@
     border-radius: 20px;
     padding-top: 12px;
 }
+.js-expense-total {
+    width:  98%;
+    height: 30px;
+    color: red;
+    border-style: none;
+}
 .js-income-display {
     
 }
