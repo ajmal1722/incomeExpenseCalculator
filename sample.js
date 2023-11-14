@@ -1,11 +1,18 @@
 // To display total income 
 let income = 0;
 let totalExpense = 0;
+let balance;
 function getIncome () {
     const inputIncomeElement = document.querySelector('.js-input-income');
     const inputIncome = parseFloat (inputIncomeElement.value);
     if (inputIncomeElement.value !== ''){
         income = income + inputIncome;
+
+        // balance
+        let balance = income;
+        balance = balance - totalExpense;
+        document.querySelector('.js-balance-display').innerHTML = 
+        balance;
     
     document.querySelector('.js-income-display').innerHTML = income;
     inputIncomeElement.value = '';
@@ -13,8 +20,6 @@ function getIncome () {
     } else {
         alert ('Enter a proper Income amount');
     }
-    const result = balance(inputExpense)
-        console.log(result)
 }
 
 
@@ -43,11 +48,14 @@ function getExpense() {
         document.querySelector('.js-expense-total').innerHTML = 
         `Total Expense = ${totalExpense}`;
 
+        // balance
+        balance = income - totalExpense;
+        document.querySelector('.js-balance-display').innerHTML = 
+        balance;
+
         // Clear input fields
         inputExpenseElement.value = '';
-        inputCategoryElement.value = '';
-        
-        
+        inputCategoryElement.value = '';  
     }
 }
 
