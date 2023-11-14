@@ -53,12 +53,33 @@ function getExpense() {
         document.querySelector('.js-balance-display').innerHTML = 
         balance;
 
+        updatePieChart()
+
         // Clear input fields
         inputExpenseElement.value = '';
         inputCategoryElement.value = '';  
     }
 }
 
+function updatePieChart(a, b, c) {
+    const data = {
+        labels: ['Income', 'Expense', 'Balance'],
+        datasets: [{
+            data: [income, totalExpense, income - totalExpense],
+            backgroundColor: ['#66b3ff', '#ffcc99', '#99ff99'] 
+        }]
+    };
 
-
-
+    const ctx = document.getElementById('pie-chart').getContext('2d');
+    const myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: {
+            title: {
+                display: true,
+                text: 'Income, Expense, and Balance Pie Chart'
+            }
+        }
+    });
+}
+updatePieChart();
