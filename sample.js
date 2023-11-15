@@ -48,7 +48,7 @@ function getExpense() {
     const inputCategory = inputCategoryElement.value;
 
     let totalExpanse = 0;
-    if (inputExpenseElement.value !== '' && inputCategoryElement.value !== '') {
+    if (inputExpenseElement.value !== '') {
         const tableBody = document.querySelector('.js-table');
         const newRow = tableBody.insertRow();
         const cellCategory = newRow.insertCell(0);
