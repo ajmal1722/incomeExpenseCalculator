@@ -89,6 +89,13 @@ function getExpense() {
         document.querySelector('.js-balance-display').innerHTML = 
         balance;
 
+        //to  hide form validation text
+        const displayMessage = document.getElementById('expense-category-display');
+        displayMessage.style.display = 'none';
+        
+        const displayText = document.getElementById('expense-display');
+        displayText.style.display = 'none'
+
         updatePieChart(income, totalExpense, income - totalExpense)
 
         // Clear input fields
@@ -103,9 +110,9 @@ function getExpense() {
     
     } else if (inputExpenseElement.value === ''){
         const displayMessage = document.getElementById('expense-display');
-        displayMessage.style.display = 'block';
-    
-    }else if (inputCategoryElement.value === ''){
+        displayMessage.style.display = 'block';   
+   
+    }else if (inputCategoryElement.value === ''  ){
         const displayText = document.getElementById('expense-category-display');
         displayText.style.display = 'block';
     }
