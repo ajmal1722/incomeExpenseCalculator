@@ -8,7 +8,8 @@ function getIncome () {
 
     const inputIncomeElement = document.querySelector('.js-input-income');
     const inputIncome = parseFloat (inputIncomeElement.value);
-    if (inputIncomeElement.value !== ''){
+    
+    if (inputIncomeElement.value !== '' && inputCategoryElement.value !== ''){
 
         const tableBody = document.querySelector('.js-table-income');
         const newRow = tableBody.insertRow();
@@ -32,10 +33,22 @@ function getIncome () {
 
         inputIncomeElement.value = '';
         document.querySelector('.js-income-category').value ='';
-    } else {
+    
+    } else if (inputIncomeElement.value === '' && inputCategoryElement.value === '') {
         const displayMessage = document.getElementById('income-display');
         displayMessage.style.display = 'block';
-    }
+        
+        const displayText = document.getElementById('income-category-display');
+        displayText.style.display = 'block'
+    
+    } else if (inputIncomeElement.value === ''){
+        const displayMessage = document.getElementById('income-display');
+        displayMessage.style.display = 'block';
+    
+    }else if (inputCategoryElement.value === ''){
+        const displayText = document.getElementById('income-category-display');
+        displayText.style.display = 'block'
+    }  
 }
 
 
@@ -77,7 +90,6 @@ function getExpense() {
     } else {
         const displayMessage = document.getElementById('expense-display');
         displayMessage.style.display = 'block';
-        console.log ('hekk')
     }
 }
 
