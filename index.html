@@ -17,11 +17,11 @@
                 <div class="d-flex">                  
                 <div class="div-input">
                     <input class="mb-2 js-income-category" type="text" placeholder="Category">
-                    <p class="validation-text">*Enter Income Category</p>
+                    <p class="validation-text d-none">*Enter Income Category</p>
                 </div>
                 <div class="div-input">
                     <input class="mb-2 js-input-income " type="number" placeholder="Income">
-                    <p class="validation-text">*Enter Proper Amount</p>
+                    <p id="income-display" class="validation-text">*Enter Proper Amount</p>
                 </div>               
                 <button onclick="getIncome()" class="js-income-btn add-button">Add</button>     
                 </div>
@@ -31,11 +31,11 @@
                 <div class="d-flex">
                 <div class="div-input">
                     <input class="mb-2 js-input-category" type="text" placeholder="Category">
-                      <p class="validation-text">*Enter Income Category</p>
+                    <p class="validation-text ">*Enter Income Category</p>
                 </div>
                 <div class="div-input">
                     <input class="mb-2 js-input-expense" type="number" placeholder="Expense">
-                    <p class="validation-text">*Enter Proper Amount</p>
+                    <p id="expense-display" class="validation-text d-none">*Enter Proper Amount</p>
                 </div>               
                 <button onclick="getExpense()" class="add-button">Add</button>   
                 </div>

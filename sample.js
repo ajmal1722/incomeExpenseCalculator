@@ -33,7 +33,8 @@ function getIncome () {
         inputIncomeElement.value = '';
         document.querySelector('.js-income-category').value ='';
     } else {
-        alert ('Enter a proper Income amount');
+        const displayMessage = document.getElementById('income-display');
+        displayMessage.style.display = 'block';
     }
 }
 
@@ -74,7 +75,9 @@ function getExpense() {
         inputExpenseElement.value = '';
         inputCategoryElement.value = '';  
     } else {
-        alert('Enter a valid expense amount and category');
+        const displayMessage = document.getElementById('expense-display');
+        displayMessage.style.display = 'block';
+        console.log ('hekk')
     }
 }
 
