@@ -33,6 +33,13 @@ function getIncome () {
 
         inputIncomeElement.value = '';
         document.querySelector('.js-income-category').value ='';
+
+        // to hide the form validation message
+        const displayMessage = document.getElementById('income-display');
+        displayMessage.style.display = 'none';
+        
+        const displayText = document.getElementById('income-category-display');
+        displayText.style.display = 'none';
     
     } else if (inputIncomeElement.value === '' && inputCategoryElement.value === '') {
         const displayMessage = document.getElementById('income-display');
