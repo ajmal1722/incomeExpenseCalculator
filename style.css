@@ -29,3 +29,6 @@ canvas {
 button {
     border-style: none;
 }
+.table-expense {
+    margin-top: 100px;
+}

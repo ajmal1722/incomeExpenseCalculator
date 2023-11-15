@@ -3,9 +3,21 @@ let income = 0;
 let totalExpense = 0;
 let balance;
 function getIncome () {
+    const inputCategoryElement = document.querySelector ('.js-income-category');
+    const inputCategory = inputCategoryElement.value;
+
     const inputIncomeElement = document.querySelector('.js-input-income');
     const inputIncome = parseFloat (inputIncomeElement.value);
     if (inputIncomeElement.value !== ''){
+
+        const tableBody = document.querySelector('.js-table-income');
+        const newRow = tableBody.insertRow();
+        const cellCategory = newRow.insertCell(0);
+        const cellExpense = newRow.insertCell(1);
+
+        cellCategory.innerHTML = inputCategory;
+        cellExpense.innerHTML = inputIncome;
+
         income = income + inputIncome;
 
         // balance
