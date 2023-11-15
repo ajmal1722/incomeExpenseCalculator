@@ -48,13 +48,13 @@ function getIncome () {
         const displayText = document.getElementById('income-category-display');
         displayText.style.display = 'block'
     
-    } else if (inputIncomeElement.value === ''){
+    } else if(inputIncomeElement.value === ''){
         const displayMessage = document.getElementById('income-display');
         displayMessage.style.display = 'block';
     
     }else if (inputCategoryElement.value === ''){
         const displayText = document.getElementById('income-category-display');
-        displayText.style.display = 'block'
+        displayText.style.display = 'block';
     }  
 }
 
@@ -94,9 +94,20 @@ function getExpense() {
         // Clear input fields
         inputExpenseElement.value = '';
         inputCategoryElement.value = '';  
-    } else {
+    } else if (inputExpenseElement.value === '' && inputCategoryElement.value === '') {
+        const displayMessage = document.getElementById('expense-category-display');
+        displayMessage.style.display = 'block';
+        
+        const displayText = document.getElementById('expense-display');
+        displayText.style.display = 'block'
+    
+    } else if (inputExpenseElement.value === ''){
         const displayMessage = document.getElementById('expense-display');
         displayMessage.style.display = 'block';
+    
+    }else if (inputCategoryElement.value === ''){
+        const displayText = document.getElementById('expense-category-display');
+        displayText.style.display = 'block';
     }
 }
 
