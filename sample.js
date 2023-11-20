@@ -17,7 +17,7 @@ function getIncome () {
         const cellExpense = newRow.insertCell(1);
 
         cellCategory.innerHTML = inputCategory;
-        cellExpense.innerHTML = inputIncome;
+        cellExpense.innerHTML = formatCurrency (inputIncome);
 
         income = income + inputIncome;
 
@@ -25,9 +25,9 @@ function getIncome () {
         let balance = income;
         balance = balance - totalExpense;
         document.querySelector('.js-balance-display').innerHTML = 
-        balance;
+        formatCurrency (balance);
     
-        document.querySelector('.js-income-display').innerHTML = income;
+        document.querySelector('.js-income-display').innerHTML = formatCurrency (income);
 
         updatePieChart (income, totalExpense, income - totalExpense);
 
@@ -87,7 +87,7 @@ function getExpense() {
         // balance
         balance = income - totalExpense;
         document.querySelector('.js-balance-display').innerHTML = 
-        balance;
+        formatCurrency (balance);;
 
         //to  hide form validation text
         const displayMessage = document.getElementById('expense-category-display');
@@ -117,6 +117,20 @@ function getExpense() {
         displayText.style.display = 'block';
     }
 }
+
+function formatCurrency(value) {
+    if (value >= 1000000) {
+      // Convert to millions and round to one decimal place
+      return (value / 1000000).toFixed(2) + 'M';
+    } else if (value >= 1000) {
+      // Convert to thousands and round to one decimal place
+      return (value / 1000).toFixed(1) + 'K';
+    } else {
+      // Display as is
+      return value.toString();
+    }
+  }
+  
 
 function updatePieChart(a, b, c) {
     const data = {
